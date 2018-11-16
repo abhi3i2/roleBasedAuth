@@ -1,0 +1,96 @@
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" dir="ltr">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
+
+<head>
+  <meta http-equiv="content-type" content="application/xhtml+xml; charset=UTF-8" />
+
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <meta name="google" value="notranslate">
+
+
+
+  <title>Actions OPTIONS</title>
+
+
+</head>
+
+<body>
+  <script>
+    function checkIfCandidate() {
+        if (document.getElementById('ROLE').value == 'CANDIDATE') {
+          document.getElementById('extra').style.display = '';
+          document.getElementById('auth_by').disabled = false;
+          document.getElementById('desc').disabled = false;
+        } else {
+          document.getElementById('extra').style.display = 'none';
+    }
+  }
+  </script>
+<form id="form" method="post" action="link to show user">
+  <div class="form-row">
+    <div class="form-group col-md-6">
+      <label for="inputUserName4">Name</label>
+      <input type="text" class="form-control" id="inputUserName4" placeholder="User Name">
+    </div>
+    <div class="form-group col-md-6">
+      <label for="inputEmail4">Email</label>
+      <input type="email" class="form-control" id="inputEmail4" placeholder="Email">
+    </div>
+    <div class="form-group col-md-6">
+      <label for="inputPassword4">Password</label>
+      <input type="password" class="form-control" id="inputPassword4" placeholder="Password">
+    </div>
+  </div>
+  <div class="form-row">
+    <div class="form-group col-md-6">
+      <label for="inputCity">Company</label>
+      <input type="text" class="form-control" id="inputCity" placeholder="Mantra Labs">
+    </div>
+    <div class="form-group col-md-6">
+      <label for="inputState">ROLE</label>
+      <select onchange='checkIfCandidate()' class="select form-control" id="ROLE" name="ROLE">
+        <option selected>none</option>
+        <option>ADMIN</option>
+        <option>INTERVIEWER</option>
+        <option>CANDIDATE</option>
+      </select>
+    </div>
+    <div id="extra" name="extra" style="display: none">
+      <div class="form-group col-md-6">
+        <label for="inputCity">College Name</label>
+        <input type="text" class="form-control" id="inputCity" placeholder="enter your college name">
+      </div>
+      <div class="form-group col-md-6">
+        <label for="inputCity">Percentage</label>
+        <input type="text" class="form-control" id="inputCity" placeholder="percentage secured in degree">
+      </div>
+      <div class="form-group col-md-6">
+        <label for="inputCity">Degree</label>
+        <input type="text" class="form-control" id="inputCity" placeholder="Highest educational qualification">
+      </div>
+      <div class="form-group col-md-6">
+        <label for="inputCity">Applying For</label>
+        <input type="text" class="form-control" id="inputCity" placeholder="position applying for">
+      </div>
+
+
+    </div>
+
+  </div>
+  <div class="form-group">
+    <div class="form-check">
+      <input class="form-check-input" type="checkbox" id="gridCheck">
+      <label class="form-check-label" for="gridCheck">
+        Check me out
+      </label>
+    </div>
+  </div>
+  <button type="submit" class="btn btn-primary">Create User</button>
+</form>
+<script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+
+</body>
+
+</html>
